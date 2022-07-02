@@ -77,6 +77,7 @@ function gameOver()
 
   //attach back event listener to document
   $(document).on("keydown",game);
+  $(".start-button").on("click",game);
 }
 
 //When game starts
@@ -84,12 +85,14 @@ function game()
 {
   //Remove event listener from document
   $(document).off();
+  $(".start-button").off();
   initialize();
   nextSequence();
 }
 
 //attach event listener to document
 $(document).on("keydown",game);
+$(".start-button").on("click",game);
 
 //attach event listener to colors
 $("[type='button']").click(function(){
